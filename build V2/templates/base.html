@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/base.css')}}">
+    <title>{% block title %}Exercise Start{% endblock %}</title>
+</head>
+<body>
+<header>
+    <h1>Exercise Routine</h1>
+</header>
+
+<nav>
+    <button><a href="/easy">100-200-300 Easy</a></button>
+    <button><a href="/medium">100-200-300 Medium</a></button>
+    <button><a href="/full">100-200-300 Full</a></button>
+    <button><a href="/triangle">Push Up Triangle</a></button>
+
+</nav>
+
+<hr>
+<!--block names are arbitrary but they much match to replace eachother
+Each block can only apper once in a page.-->
+{% block timer %}
+<!--where timer will go-->
+{% endblock %}
+
+{% block content %}
+<!--Other pages go here-->
+{% endblock %}
+
+</body>

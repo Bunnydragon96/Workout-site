@@ -1,0 +1,7 @@
+services:
+  routinesite:
+    image: docker.io/library/pushuproutine:3.0
+    container_name: pushuproutine
+    ports:
+    - 12326:12326
+    restart: unless-stopped
