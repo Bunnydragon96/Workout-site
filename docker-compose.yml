@@ -1,7 +1,9 @@
 services:
   routinesite:
-    image: docker.io/library/pushuproutine:3.0
+    image: docker.io/library/pushuproutine:4.0
     container_name: pushuproutine
     ports:
-    - 12326:12326
+      - 12326:12326
+    env_file:
+      - .env 
     restart: unless-stopped
